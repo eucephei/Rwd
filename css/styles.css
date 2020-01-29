@@ -1,0 +1,123 @@
+body, html {
+  height:100%;
+  background-color: #d7ccc8;
+  font-size: 1.2rem;                      /* Extra Large  .col-xl-  */
+}
+
+/*
+ * Off Canvas sidebar at lg breakpoint
+ */
+@media screen and (max-width: 992px) {    /* Large  .col-lg-  */
+  html {
+    font-size: 1rem;
+  }
+}
+
+/*
+ * Off Canvas wider at md breakpoint
+ */
+ @media screen and (max-width: 768px) { /* Small .col-md- */
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -38%;
+  }
+  .row-offcanvas-left.active {
+    left: 38%;
+    margin-left: -6px;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 38%;
+    height: 100%;
+  }
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+/*
+ * Off Canvas wider at sm breakpoint
+ */
+@media screen and (max-width: 34em) { /* Small .col-sm- ≥576px */
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -45%;
+  }
+  .row-offcanvas-left.active {
+    left: 45%;
+    margin-left: -6px;
+  }  
+  .sidebar-offcanvas {
+    width: 45%;
+  }
+  html {
+    font-size: 0.6rem;
+  }
+}
+
+/*
+ * Off Canvas wider at extra small breakpoint
+ */
+@media screen and (max-width: 576px) { /* extra Small .col- <5576px */
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%;
+  }
+  .row-offcanvas-left.active {
+    left: 50%;
+    margin-left: -3px;
+   
+  }
+  .sidebar-offcanvas {
+    width: 50%;
+    
+  }
+  html {
+    font-size: 0.4rem;
+  }
+}
+
+/* 
+ * --------------------------------------------------
+ */
+.card {
+    overflow:hidden;
+}
+
+.card-body .rotate {
+    z-index: 8;
+    float: right;
+    height: 100%;
+}
+
+.card-body .rotate i {
+    color: rgba(20, 20, 20, 0.15);
+    position: absolute;
+    left: 0;
+    left: auto;
+    right: -10px;
+    bottom: 0;
+    display: block;
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+}
+
+.nav-link a{
+  color: #e0f7fa;
+  text-decoration:none;
+}
+
+.nav-link a:hover {
+  color: #0097a7;
+ text-decoration: underline;
+}

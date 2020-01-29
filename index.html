@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>葛飾 北斎 美術館</title>
+    <meta name="description"
+        content="A Bootstrap 4 admin dashboard theme. The sidebar toggles off-canvas on smaller screens. This example also include large stat blocks, modal and cards. The top navbar is controlled by a separate hamburger toggle button." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark mb-3" style="background-color:  #4e342e;">
+        <div class="flex-row d-flex">
+            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas"
+                title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">北齋美術館</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://wiki.komica.org/葛飾北斎_(Fate)">Link</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#myAlert" data-toggle="collapse">北齋展示</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-target="#myModal" data-toggle="modal">本館資訊</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="main">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-md-3 col-lg-2 sidebar-offcanvas pl-0" style="background-color: #795548;" id="sidebar"
+                role="navigation">
+                <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                    <li class="nav-item"><a class="nav-link" href="#">北齋介紹</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">展示▾</a>
+                        <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
+                            <li class="nav-item"><a class="nav-link" href="#富嶽三⼗六景">常設展</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#浮世畫推薦">特別展</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#features">參觀資訊</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">周邊設施介紹</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#flexbox">訪客評價</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layouts">基本理念</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">LOGO標誌</a></li>
+                </ul>
+            </div>
+            <!--/col-->
+
+            <div class="col main pt-5 mt-3">
+                <h1 class="display-4 d-none d-sm-block">
+                    葛飾 北斎
+                </h1>
+                <div class="container">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-inline w-100" src="images/1280px-Great_Wave_off_Kanagawa2.jpg"
+                                    alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>神奈川沖浪裏</h5>
+                                    <p>描述巨浪威脅神奈川沖（神奈川外海）的船隻</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-inline w-100" src="images/1280px-Red_Fuji_southern_wind_clear_morning.jpg"
+                                    alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>凱風快晴</h5>
+                                    <p>富士山的樹海，背景是藍天白雲，富士山頂還有殘留的雪</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-inline w-100" src="images/1280px-Hokusai_1760-1849_Ocean_waves.jpg"
+                                    alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>千絵の海</h5>
+                                    <p>海や川といったの自然と人間が織り成す日常の光景</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- end of container -->
+
+                <hr id="富嶽三⼗六景">
+                <p  class="lead d-none d-sm-block font-weight-bold">富嶽三⼗六景</p>
+
+                <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <bold><strong>『富嶽三⼗六景』</strong> ふがくさんじゅうろっけい 代表作現在展覽中!
+                </div>
+                <div class="row mb-3">
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card bg-secondary text-white h-100">
+                            <div class="card-body " style="background-color:#37474f;">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-4x"></i>
+                                    <img id="imgDog" src="images/320px-Kajikazawa_in_Kai_province.jpg"
+                                        class="img-thumbnail rounded" data-species="甲州石班沢" />
+                                </div>
+                                <h6 class="text-uppercase">甲州石班澤</h6>
+                                <h1 class="display-8">21</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white bg-info h-100">
+                            <div class="card-body" style="background-color:#78909c ">
+                                <div class="rotate">
+                                    <i class="fa fa-twitter fa-4x"></i>
+                                    <img id="imgDog" src="images/320px-Surugadai_in_Edo.jpg"
+                                        class="img-thumbnail rounded" data-species="東都駿台" />
+                                </div>
+                                <h6 class="text-uppercase">東都駿台</h6>
+                                <h1 class="display-8">5</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white bg-primary h-100">
+                            <div class="card-body" style="background-color:#546e7a ">
+                                <div class="rotate">
+                                    <i class="fa fa-share fa-4x"></i>
+                                    <img id="imgDog" src="images/320px-Lightnings_below_the_summit.jpg"
+                                        class="img-thumbnail rounded" data-species="山下白雨" />
+                                </div>
+                                <h6 class="text-uppercase">山下白雨</h6>
+                                <h1 class="display-8">18</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white bg-dark h-100">
+                            <div class="card-body" style="background-color:#455a64 ">
+                                <div class="rotate">
+                                    <i class="fa fa-list fa-4x"></i>
+                                    <img id="imgDog"
+                                        src="images/320px-Fuji_seen_through_the_Mannen_bridge_at_Fukagawa.jpg"
+                                        class="img-thumbnail rounded" data-species="深川万年橋下" />
+                                </div>
+                                <h6 class="text-uppercase">深川萬年橋下</h6>
+                                <h1 class="display-8">6</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/row-->
+
+                <hr id="浮世畫推薦" >
+                <p class="lead d-none d-sm-block font-weight-bold">浮世畫推薦</p>
+                <div class="row placeholders mb-3">
+                    <div class="col-6 col-sm-3 placeholder text-center">
+                        <img src="images/A_Tour_of_the_Waterfalls_of_the_Provinces-Kisokaidou_Onono_Bakuhu.jpg"
+                            class="mx-auto img-fluid rounded-circle" alt="木曾海道小野ノ瀑布 thumbnail">
+                        <h6>木曾海道小野瀑布</h6>
+                        <span class="text-muted">木曾海道小野ノ瀑布</span>
+                    </div>
+                    <div class="col-6 col-sm-3 placeholder text-center">
+                        <img src="images/394px-A_Tour_of_the_Waterfalls_of_the_Provinces-Toukaidou_Sakanoshita_Kiyotaki_Kannon.jpg"
+                            class="center-block img-fluid rounded-circle" alt="東海道坂ノ下清滝くわんおん thumbnail">
+                        <h6>東海道坂下清瀑布</h6>
+                        <span class="text-muted">東海道坂ノ下清滝くわんおん</span>
+                    </div>
+                    <div class="col-6 col-sm-3 placeholder text-center">
+                        <img src="images/A_Tour_of_the_Waterfalls_of_the_Provinces-Shimotsuke_Kurokamiyama_Kirihurino_Taki.jpg"
+                            class="mx-auto img-fluid rounded-circle" alt="下野黒髪山きりふりの滝 thumbnail">
+                        <h6>下野黑髮山霧降瀑布</h6>
+                        <span class="text-muted">下野黒髪山きりふりの滝</span>
+                    </div>
+                    <div class="col-6 col-sm-3 placeholder text-center">
+                        <img src="images/A_Tour_of_the_Waterfalls_of_the_Provinces-Washuu_Yoshino_Yoshitsune_Umaarai_No_Taki.jpg"
+                            class="mx-auto img-fluid rounded-circle" alt="和州吉野義経馬洗滝 thumbnail">
+                        <h6>和州吉野義經馬洗瀑布</h6>
+                        <span class="text-muted">和州吉野義経馬洗滝</span>
+                    </div>
+                </div>
+
+                <a id="features"></a>
+                <hr>
+                <p class="lead mt-2 font-weight-bold">
+                    參觀資訊: 提供開館時間、入館時間、休館日、交通資訊等本館參觀資訊。
+                </p>
+                <div class="row my-4">
+                    <!-- <div class="ccol-lg-3 col-md-4"> -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid"
+                                src="images/640px-Katsushika_Hokusai_-_Shell_Gathering_-_Google_Art_Project.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title">潮干狩圖</h4>
+                                <p class="card-text">用耙子或類似工具挖出貝殼，這些貝殼在潮汐低時退潮的沙灘上潛水。所謂的潮干狩(しおひがり)，就是在夏天的時候，帶著耙子跟水桶的海邊到挖蛤蜊~</p>
+                                <a href="https://ja.wikipedia.org/wiki/潮干狩り" class="btn btn-primary">詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-inverse">
+                                    <tr>
+                                        <th>日期</th>
+                                        <th>開館時間</th>
+                                        <th>響導時間</th>
+                                        <th>門票</th>
+                                        <th>交通</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>周一~周五</td>
+                                        <td>9:30~21:00</td>
+                                        <td>每時間</td>
+                                        <td>大人 300 幼童 100</td>
+                                        <td>捷運 公車 自動車 皆可</td>
+                                    </tr>
+                                    <tr>
+                                        <td>週六</td>
+                                        <td>9:00-22:30</td>
+                                        <td>每半小時兩次</td>
+                                        <td>大人 450 幼童 100</td>
+                                        <td>同上</td>
+                                    </tr>
+                                    <tr>
+                                        <td>週日</td>
+                                        <td>9:00-20:00</td>
+                                        <td>每半小時一次</td>
+                                        <td>同上</td>
+                                        <td>同上</td>
+                                    </tr>
+                                    <tr>
+                                        <td>國定假日</td>
+                                        <td>8:00-22:00</td>
+                                        <td>每20分</td>
+                                        <td>大人 250 幼童 50</td>
+                                        <td>建議公共運輸</td>
+                                    </tr>
+                                    <tr>
+                                        <td>特別展覽日</td>
+                                        <td>7:00~23:00</td>
+                                        <td>每45分</td>
+                                        <td>大人 200 幼童 免費</td>
+                                        <td>同上</td>
+                                    </tr>
+                                    <tr>
+                                        <td>緊急時</td>
+                                        <td>關閉</td>
+                                        <td>無</td>
+                                        <td>50%補償</td>
+                                        <td>有提供專用車</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--/row-->
+
+                <a id="flexbox"></a>
+                <hr>
+                <h2 class="mt-4">諸評價</h2>
+                <h6>Masonry-style grid columns with Bootstrap 4 flexbox</h6>
+
+                <div class="card-columns mb-3">
+                    <div class="card">
+                        <img class="card-img-top img-fluid" src="images/1280px-Hokusai_Flat_fish_and_pink.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">蛙とゆきのした</h4>
+                            <p class="card-text">
+                                葛飾北齋的青蛙都去過哪些地方旅行。放下手機來到國立西洋美術館時，我並沒有料到在這裡也能看到出門旅行的青蛙寄來的「明信片」。眼前的朝顏花朵溫婉，藤蔓舒展，青蛙藏身於葉間，篤定的神情也與遊戲中那隻小青蛙頗為相似。而此次展覽中描繪青蛙的作品遠不止於此。就像我們沉迷於旅行青蛙寄回的明信片一樣，歐洲人也瘋狂地迷上了北齋富有衝擊力的構圖以及對四時之景的細膩描繪，莫奈、塞尚、修拉、梵谷這些大師都沒少借鑑北齋的構圖和用色。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card card-inverse bg-inverse mt-3">
+                        <div class="card-body">
+                            <h3 class="card-title">絹本著色潮干狩図〈北斎筆〉</h3>
+                            <p class="card-text">一個淺海，可以俯瞰富士山，但是近景描繪的是淺間神社的大通り門，這不是同一點。
+                                考慮到手繪繪畫有可能與版畫有所不同並且是按個人順序製作的，因此富士山在此圖中的觀點可能表示特定的土地或特定的土地，但這一點尚未闡明。</p>
+                            <a href="https://www.weblio.jp/content/絹本著色潮干狩図" class="btn btn-outline-info">絹本著色</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top img-fluid" src="images/1280px-Salted_salmond_and_mice.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">塩鮭と鼠</h4>
+                            <p class="card-text">
+                                栩栩如生的鹽鮭和鼠、秋草、菊圖等。不過，最膾炙人口的作品，是嵌在祭典用祭屋台車頂內的畫，東町祭屋台的是「龍」和「鳳凰」﹔上町祭屋台是「怒濤（男浪）」及「怒濤（女浪）」，構圖大膽、線條細緻，想像台車在祭典時舞動的韻律，彷彿這4幅畫也跟著活躍起來，龍舞、鳳翔、陣陣怒濤洶湧，氣勢懾人﹗
+                            </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card card-body card-inverse card-primary text-center">
+                        <blockquote class="card-blockquote">
+                            <p>我多麼希望⾃⼰還能再活多五年，這樣⼦我才有
+                                時間嘗試成為⼀個真正的畫家
+                            </p>
+                            <footer>
+                                <small>
+                                    天我をして五年の命を保たしめば 真正の画⼯
+                                    となるを得（う）べし。 <cite title="Source Title">《富嶽百景·初編》</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card card-body text-center">
+                        <h4 class="card-title">一句詩文，一面風景，</h4>
+                        <ul class="list-unstyled">
+                            <li>一座或巍峨或靈動的富士山</li>
+                            <ul>
+                                <li>精美繪配上雋永的俳句、季語、短歌</li>
+                                <li>生活的詩意盡在其中</li>
+                                <li>即使久困樊籠</li>
+                            </ul>
+                        </ul>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+
+
+                    <div class="card card-body">
+                        <h4 class="card-title">호를 서른 번 바꾸고, 아흔세 번 이사하다!</h4>
+                        <p class="card-text">그는 서른 번이나 호를 바꿨다. 제자에게 호를 넘기기 위해서라는 설도 있었다. 아흔세 번을 넘는 이사에 대한 이야기도 유명한데(하루
+                            만에 세 번이나 이사한 일도 있다고 한다), 이것은 그림을 그리는 것에만 몰두해 방이 어지러워지면 이사를 했기 때문이라고 한다. 마지막으로 아흔세 번째로 이사하면서
+                            예전에 살던 집으로 옮겼을 때, 방이 이사갈 때와 별 차이가 없이 어지러웠기 때문에 더 이상 이사하지 않게 되었다고 한다. 당연히 식생활은 엉망진창이었지만 그러고도
+                            90세 넘게 장수했던 것은 소귀나물(慈姑)을 매일 먹었기 때문이라고 한다.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+                    </div>
+                    <div class="card card-body">
+
+                        <img class="card-img img-fluid" src="images/Hokusai_Carps.jpg" alt="Card image">
+
+                        <h4 class="card-title">鯉図</h4>
+                        <p class="card-text">
+                            海賊王910話有不少場景背後都帶有日本經典浮世繪作品的痕跡。在端午（即農曆五月五日）梅雨時期中，由希望生男孩的家庭在家門庭前用紙、布等描繪鯉魚的圖案，使之隨風飄動，模仿鯉魚遊動的的風幡。也稱為「皐幟」。
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 12 mins ago</small></p>
+                    </div>
+                </div>
+                <!--/card-columns-->
+
+
+                <a id="layouts"></a>
+                <hr>
+                <h2 class="sub-header mt-5">基本理念</h2>
+                <div class="row mb-3">
+                    <div class="col-lg-6">
+
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                秀麗的山川景色和人民的勞動生活 &amp; 愛好
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">	かつしか ほくさい</h4>
+                                <p class="card-text">北齋生於江戶東郊的葛飾村，後成為御用磨鏡師的養子。少年時在出租店當學徒工，以四處奔走送書為業。業餘學畫插圖，曾就學於勝川春章、俵屋宗理等畫師。19歲開始發表作品，卒於88歲高齡，畢生留下的作品據推定約三萬五千幅。.</p>
+                                <button type="button" class="btn btn-secondary btn-lg">參考</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#profile1" role="tab" data-toggle="tab">諸國名橋奇覽</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#messages1" role="tab" data-toggle="tab">肉筆畫帖</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#settings1" role="tab" data-toggle="tab">富嶽百景</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <br>
+                            <div role="tabpanel" class="tab-pane" id="profile1">
+                                <h4>諸國名橋奇覽</h4>
+                                <p>
+                                    以全國名橋為題材，全11圖，錦繪。天保4-5年（1833年- 1834年），落款前北齋為一筆。畫中描繪的橋多是真實存在的，但也包含著傳說中的橋。諸國名橋奇覽對於結構之美的側繪，實在是太厲害了。
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages1">
+                                <h4>肉筆畫帖</h4>
+                                <p>
+                                    《肉筆畫帖》是由全10圖一帖構成的肉筆畫（紙本著色），正式的作品名稱是「前北齋卍翁肉筆畫帖」。這是天保5～10年（1834～1839）發表的，據說是北齋晚年的傑作。天保大饑荒之際，聽說北齋畫了很多肉筆畫帖賣，倖免餓死。有「福壽草和扇面」「鷹」「剪子和麻雀」「櫻花和包裹」「蛇和小鳥」「不歸和彩虹」「鰈魚和撫子」「青蛙和雪糕」「鯰和紅葉」「鹽鮭魚和老鼠」等。
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="settings1">
+                                <h4>富嶽百景</h4>
+                                <p>
+                                    富嶽百景／ふがくひゃっけい）是日本作家太宰治所創作的一部短篇小說和隨筆。該作起初於文學雜誌《文體》上連載，後收錄在太宰治的短篇小說集《女生徒》上。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-6">
+                        <div class="card card-default card-body">
+                            <ul id="tabsJustified" class="nav nav-tabs nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="" data-target="#tab1" data-toggle="tab">富嶽風景</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="" data-target="#tab2" data-toggle="tab">北齋漫畫</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="" data-target="#tab3" data-toggle="tab">解説</a>
+                                </li>
+                            </ul>
+                            <!--/tabs-->
+                            <br>
+                            <div id="tabsJustifiedContent" class="tab-content">
+                                <div class="tab-pane" id="tab1">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-success">31</span>駿州大野新田</a>
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-success">8</span>青山圓座枩</a>
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-success">23</span>東海道程ケ谷</a>
+                                        <a href="" class="list-group-item text-muted">富嶽三十六景</a>
+                                    </div>
+                                </div>
+                                <div class="tab-pane active" id="tab2">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <h4>北齋漫畫</h4>
+                                            <p>全15篇。約4千幅圖，彩色摺繪本。文化11年（1814年），北齋54歲（畫號為戴斗）時首版。作為學習繪畫的典範教材，在當時大受好評。其中包括市井百態、山水鳥獸、鬼臉妖怪等，甚至是西方遠近法都有涉及。</p>
+                                        </div>
+                                        <div class="col-sm-5"><img src="images/北齋漫畫.jpg"
+                                                class="float-right img-responsive img-rounded"></div>
+                                    </div>
+                                    <hr>
+                                    <a href="javascript:;" class="btn btn-info btn-block">購買</a>
+                                    <div class="spacer5"></div>
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                    <div class="list-group">
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-info label-pill">31</span>
+                                                大野新田は、東海道の原宿（沼津市）と吉原宿（富士市）へと向かう途中にあり、
+                                                富士が真正面に見えるところとして知られています。</a>
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-info label-pill">8</span>
+                                                円座の松は、原宿村の龍巌寺境内にあった名木です。
+                                                江戸近郊の名所としてこの寺と松は知られており、「江戸名所図会」にも紹介されています。</a>
+                                        <a href="" class="list-group-item"><span
+                                                class="float-right label label-info label-pill">23</span>
+                                                横浜市保土ヶ谷は、日本橋から出発して四番目にある宿駅です。
+                                                近くの品野坂は、松の老樹が生い茂っており、ここから富士が望める景勝の地であると
+                                                「江戸名所図会」は伝えています。</a>
+                                        <a href="" class="list-group-item text-muted">「富嶽三十六景」解説付き</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/tabs content-->
+                        </div>
+                        <!--/card-->
+                    </div>
+                    <!--/col-->
+                    <div class="col-lg-6">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <h4 class="card-title">將北齋推向世界的 3 個關鍵人物！</h4>
+                                <div class="card-header" role="tab" id="headingOne" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    1：收藏家浦上滿
+                                </div>
+                                <div id="collapseOne" class="card-block collapse in" role="tabpanel"
+                                    aria-labelledby="headingOne">
+                                    <p>在東京經營 <code>「浦上蒼穹堂」</code> 的古董美術商浦上滿，是全世界最重要的葛飾北齋藏家之一，他所收集的《北齋漫畫》在質與量方面都是第一。 </p>
+                                </div>
+                                <div class="card-header" role="tab" id="headingTwo" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    2：畫家布拉克蒙！
+                                </div>
+                                <div id="collapseTwo" class="card-block collapse" role="tabpanel"
+                                    aria-labelledby="headingTwo">
+                                    <p>有位荷蘭醫生西博德（Philipp Franz von Siebold）曾將北齋的畫作帶回歐洲；同時，《北齋漫畫》也被當作包裝填充物，隨著陶瓷器一同出口西方，後來被法國畫家布拉克蒙（Félix Bracquemond）發現、進而掀起「日本主義」（Japonisme）熱潮。</p>
+                                </div>
+                                <div class="card-header" role="tab" id="headingThree" data-toggle="collapse"
+                                    data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    3：讚賞北齋的梵谷？
+                                </div>
+                                <div id="collapseThree" class="card-block collapse" role="tabpanel"
+                                    aria-labelledby="headingThree">
+                                    <p>浦上滿與梵谷博物館館長、梵谷弟弟西奧（Theo van Gogh）的曾孫會面，也趁機提出了這個疑問，得到的解答是「當時北齋在巴黎很受歡迎，作品要價不斐，梵谷可能是買不起吧」。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-4">
+                            <a href="http://www.mottimes.com/cht/article_detail.php?serial=1895&type=0" target="_ext">浮世繪大師葛飾北齋如何在全世界掀起巨浪？</a>
+                        </p>
+                    </div>
+                    <!--/col-->
+                </div>
+                <!--/row-->
+
+            </div>
+            <!--/main col-->
+        </div>
+
+    </div>
+    <!--/.container-->
+    <footer class="container-fluid">
+        <p class="text-right small">Copyright © allrights reserved THE HOKUSAI MUSEUM</p>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">簡介</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>葛飾北齋（ ⽇語：葛飾 北斎 ／ かつしか ほくさい Katsushika Hokusai 1760年10⽉31⽇－1849年5⽉10
+                        ⽇），本名中島時太郎，1760年⽣於江⼾（現東京），是⽇本江⼾時代後期的浮世繪師，⽇本化政文
+                        化的代表⼈物。他14歲學習雕版印刷，18歲向另⼀位浮世繪師勝川春章學畫，開始了⾃⼰漫⻑且多產
+                        的繪畫⽣涯。1826年，為了配合當時的⽇本內地旅遊業的發展，也因為個⼈對富⼠⼭的情有獨鍾，北
+                        齋以富⼠⼭不同⾓度的樣貌為題材，創作了系列風景畫《富嶽三⼗六景》，並憑此名聲遠揚。該系列
+                        中以《凱風快晴》和《神奈川沖浪裏》最為知名。女兒葛飾應為作為⽗親的助⼿，同樣是知名浮世繪
+                        畫家。</p>
+                    <p>
+                        <a href="https://zh.wikipedia.org/zh-tw/葛饰北斋" target="_ext">維基百科</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--scripts loaded here-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
